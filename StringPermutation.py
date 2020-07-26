@@ -16,7 +16,7 @@ def permute(valDict,level):
         for item in valDict.keys():
             if valDict[item]>0:
                 NewVal=valDict.copy()
-                NewStr[StrLen-level]=item
+                NewStr[StrLen-level]=item   #lexicographical order
                 NewVal[item]=NewVal[item]-1
                 permute(NewVal,level-1)
 
